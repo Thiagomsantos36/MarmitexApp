@@ -2,16 +2,18 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './src/LoginScreen'; // Importe a tela de login
-import Sales from './src/vendasScreen'; // Importe a tela de vendas
+import Sales from './src/vendas'; // Importe a tela de vendas
 
 const Stack = createStackNavigator(); // Cria uma instância do Stack Navigator
 
+
 export default function App() { // Função principal do aplicativo
+  
   return (
-    <NavigationContainer> {/* Contêiner de navegação raiz */}
-      <Stack.Navigator initialRouteName="Login"> 
+    <NavigationContainer> 
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={Login} /> 
-        <Stack.Screen name="Vendas" component={Sales} /> 
+        <Stack.Screen name="Vendas" component={Sales} />
       </Stack.Navigator>
     </NavigationContainer>
   );
